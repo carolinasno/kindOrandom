@@ -1,0 +1,24 @@
+<section ng-controller="KindnessController">
+
+  <form ng-submit="createKindness()">
+    <input type="text" ng-model="newKindness.name" placeholder="Your Name">
+    <input type="date" ng-model="newKindness.date" placeholder="Date">
+    <input type="text" ng-model="newKindness.kindness" placeholder="Act of Kindness">
+    <input type="text" ng-model="newKindness.location" placeholder="Location">
+    <!-- <input type="text" ng-model="newKindness.lat" placeholder="Latitude">
+    <input type="text" ng-model="newKindness.lng" placeholder="Longitude"> -->
+    <input type="submit">
+  </form>
+
+  <div ng-repeat="kindness in kindness">
+    <h4>{{kindness.name}}</h4>
+    <h5>{{kindness.date}}</h5>
+    <h5>{{kindness.location}}</h5>
+    <h5>{{kindness.lat}}</h5>
+    <h5>{{kindness.lng}}</h5>
+    <p>{{kindness.kindness}}</p>
+  </div>
+
+  <div id="map"></div>
+
+</section>
