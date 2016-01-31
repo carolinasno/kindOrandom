@@ -13,3 +13,62 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   background-color: tomato;
+   font-family: 'Ropa Sans', sans-serif;
+   text-align: center;
+ }
+
+ #map {
+   width:500px;
+   height:500px;
+   margin: 0 auto;
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
+
+.kindOrandom {
+  font-family: 'Pacifico', cursive;
+  font-size: 200px;
+  color: floralwhite;
+  text-shadow: 2px 2px orangered;
+  margin: 0;
+}
+
+.kindness-form {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.kindness-display {
+  border: 1px solid black;
+  width: 400px;
+  background-color: #DAFFEE;
+  border-radius: 1em;
+  padding: 0px 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.date {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0em 0em 0em 0em;
+  font: 11px BlinkMacSystemFont;
+}
