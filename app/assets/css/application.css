@@ -14,18 +14,47 @@
  *= require_self
  */
 
+ @media (min-width: 400px) {
+   #map {
+     max-width: 100%;
+   }
+
+   svg {
+     max-height: 300px;
+   }
+
+   .kindness-form {
+     max-width: 100%;
+   }
+
+   .kindness-display {
+     max-width: 300px;
+   }
+ }
+
  body {
    background-color: tomato;
-   font-family: 'Ropa Sans', sans-serif;
+   font-family: 'Yantramanav', sans-serif;
+   font-weight: 100;
    text-align: center;
  }
 
- #map {
-   width:500px;
-   height:500px;
+ ng-map {
+   width: 500px;
+   height: 500px;
    margin: 0 auto;
    margin-top: 20px;
    margin-bottom: 20px;
+ }
+
+ svg {
+   height: 500px;
+ }
+
+ .share-your-story {
+   font-family: 'Oswald', sans-serif;
+   text-decoration: none;
+   color: snow;
  }
 
 .kindOrandom {
@@ -34,16 +63,17 @@
   color: floralwhite;
   text-shadow: 2px 2px orangered;
   margin: 0;
+  text-align: center;
 }
 
 .kindness-form {
-  width: 600px;
+  width: 500px;
   margin: 0 auto;
 }
 
 .kindness-display {
   border: 1px solid black;
-  width: 400px;
+  width: 300px;
   background-color: #DAFFEE;
   border-radius: 1em;
   padding: 0px 20px;
@@ -54,21 +84,13 @@
 .date {
   height: 38px;
   padding: 6px 10px;
-  background-color: #fff;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
-  box-shadow: none;
   box-sizing: border-box;
-  margin-bottom: 1.5rem;
-  text-rendering: auto;
-  color: initial;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: start;
-  margin: 0em 0em 0em 0em;
+  margin: 0em 0em 1.5em 0em;
   font: 11px BlinkMacSystemFont;
+}
+
+h3 {
+  font-weight: bold;
 }

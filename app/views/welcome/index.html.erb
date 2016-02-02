@@ -1,7 +1,9 @@
 <div class="container">
   <section ng-controller="KindnessController">
 
-    <form class="kindness-form" ng-submit="createKindness()">
+    <h3 ng-show="added">Kindness Added! Thanks for being kind.</h3>
+
+    <form ng-hide="added" class="kindness-form" ng-submit="createKindness()">
       <div class="row">
         <div class="six columns">
           <input class="u-full-width" type="text" ng-model="newKindness.name" placeholder="Your Name">
@@ -34,9 +36,7 @@
       <h4>{{kindness.kindness}}</h4>
       <h5>on {{kindness.date}}</h5>
       <h5>at {{kindness.location}}</h5>
-      <!-- <h5>{{kindness.lat}}</h5>
-      <h5>{{kindness.lng}}</h5> -->
     </div>
-    
+
   </section>
 </div>
