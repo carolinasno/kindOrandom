@@ -8,7 +8,7 @@
 
 kindness = Kindness.create([
   name: 'carolina',
-  date: '1/29/2016',
+  date: 'Jan. 29, 2016',
   kindness: 'helped an old man carry bags up a flight of stairs',
   location: '10 East 21st Street, New York, NY 10010',
   lat: '40.7399',
@@ -16,7 +16,7 @@ kindness = Kindness.create([
   ]);
 kindness = Kindness.create([
   name: 'oliver',
-  date: '1/30/2016',
+  date: 'Jan. 30, 2016',
   kindness: 'saw a woman buy a homeless man a sandwich and coffee',
   location: '166 Elizabeth Street, New York, NY 10012',
   lat: '40.720641',
@@ -24,7 +24,7 @@ kindness = Kindness.create([
   ]);
 kindness = Kindness.create([
   name: 'matilda',
-  date: '1/31/2016',
+  date: 'Jan. 31, 2016',
   kindness: 'saved a guy from getting hit by a bus',
   location: '13-17 Laight Street, New York, NY 10013',
   lat: '40.721515',

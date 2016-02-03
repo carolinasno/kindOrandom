@@ -1,42 +1,64 @@
-<div class="container">
-  <section ng-controller="KindnessController">
-
-    <h3 ng-show="added">Kindness Added! Thanks for being kind.</h3>
-
-    <form ng-hide="added" class="kindness-form" ng-submit="createKindness()">
-      <div class="row">
-        <div class="six columns">
-          <input class="u-full-width" type="text" ng-model="newKindness.name" placeholder="Your Name">
+<div class="share-map-container row" ng-controller="KindnessController">
+  <div class="share-your-story five columns">
+    <a class="kindness-story" href="#">SHARE YOUR RANDOM ACT OF KINDNESS</a>
+    <ng-map zoom="12" center="New York, NY">
+      <marker id="kindness-marker" ng-repeat="kindness in kindness" position="{{kindness.location}}" on-click="map.showInfoWindow('kindness-info')"></marker>
+      <info-window id="kindness-info" visible-on-marker="kindness-marker">
+        <div ng-non-bindable>
+          <div id="siteNotice"></div>
+          <div id="bodyContent">
+            <h4 id="firstHeading" class="firstHeading" ng-repeat="kindness in kindness track by kindness.id">{{kindness.name}}</h4>
+          </div>
         </div>
-        <div class="six columns">
-          <input class="date u-full-width" type="date" ng-model="newKindness.date" placeholder="Date">
+      </info-window>
+    </ng-map>
+    <div class="kindness-form-container">
+      <!-- <h3 ng-show="added">Kindness Added! Thanks for being kind.</h3> -->
+      <!-- <form ng-hide="added" class="kindness-form" ng-submit="createKindness()"> -->
+      <form class="kindness-form" ng-submit="createKindness()">
+        <div class="row">
+          <div class="six columns">
+            <input class="u-full-width" type="text" ng-model="newKindness.name" placeholder="Your Name">
+          </div>
+          <div class="six columns">
+            <input class="date u-full-width" type="date" ng-model="newKindness.date" placeholder="Date">
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="twelve columns">
-          <textarea class="u-full-width" type="text" ng-model="newKindness.kindness" placeholder="Act of Kindness"></textarea>
+        <div class="row">
+          <div class="twelve columns">
+            <textarea class="u-full-width" type="text" ng-model="newKindness.kindness" placeholder="Act of Kindness"></textarea>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="twelve columns">
-          <input class="u-full-width" type="text" ng-model="newKindness.location" placeholder="Location">
+        <div class="row">
+          <div class="twelve columns">
+            <input class="u-full-width" type="text" ng-model="newKindness.location" placeholder="Location">
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="twelve columns">
-          <input class="u-full-width" type="submit">
+        <div class="row">
+          <div class="twelve columns">
+            <input class="u-full-width" type="submit">
+          </div>
         </div>
-      </div>
-      <!-- <input type="text" ng-model="newKindness.lat" placeholder="Latitude">
-      <input type="text" ng-model="newKindness.lng" placeholder="Longitude"> -->
-    </form>
-
-    <div class="kindness-display" ng-repeat="kindness in kindness">
-      <h3>{{kindness.name}}</h3>
-      <h4>{{kindness.kindness}}</h4>
-      <h5>on {{kindness.date}}</h5>
-      <h5>at {{kindness.location}}</h5>
+        <!-- <input type="text" ng-model="newKindness.lat" placeholder="Latitude">
+        <input type="text" ng-model="newKindness.lng" placeholder="Longitude"> -->
+      </form>
     </div>
+  </div>
 
-  </section>
+  <div class="seven columns">
+    <section class="kindness-container">
+      <div class="kindness-story-container">
+        <div class="kindness-content" ng-repeat="kindness in kindness">
+          <ul id="kindness-list">
+            <li>
+              <h3>{{kindness.name}}</h3>
+              <h4>{{kindness.kindness}}</h4>
+              <h5>on {{kindness.date | date: MM/dd/yyyy}}</h5>
+              <h5>at {{kindness.location}}</h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
 </div>

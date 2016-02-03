@@ -17,13 +17,6 @@
   <header>
     <h1 class="kindOrandom"><%= render "/partials/kindorandom" %></h1>
   </header>
-  <div class="share-your-story">
-    <a href="#">SHARE YOUR KINDNESS STORY</a>
-  </div>
-
-  <ng-map zoom="12" center="New York, NY">
-    <marker ng-repeat="kindness in kindness" position="{{kindness.location}}"></marker>
-  </ng-map>
 
   <%= yield %>
 

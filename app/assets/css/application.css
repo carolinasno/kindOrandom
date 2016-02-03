@@ -15,7 +15,7 @@
  */
 
  @media (min-width: 400px) {
-   #map {
+   ng-map {
      max-width: 100%;
    }
 
@@ -27,7 +27,7 @@
      max-width: 100%;
    }
 
-   .kindness-display {
+   .kindness-content {
      max-width: 300px;
    }
  }
@@ -40,7 +40,7 @@
  }
 
  ng-map {
-   width: 500px;
+   width: 450px;
    height: 500px;
    margin: 0 auto;
    margin-top: 20px;
@@ -48,13 +48,20 @@
  }
 
  svg {
-   height: 500px;
+   height: 250px;
  }
 
- .share-your-story {
+ .kindness-story {
    font-family: 'Oswald', sans-serif;
+   font-size: 28px;
    text-decoration: none;
+   text-shadow: 2px 2px orangered;
    color: snow;
+   font-weight: bold;
+ }
+
+ a:hover {
+   color: lightgrey;
  }
 
 .kindOrandom {
@@ -67,30 +74,59 @@
 }
 
 .kindness-form {
-  width: 500px;
+  width: 450px;
   margin: 0 auto;
 }
 
-.kindness-display {
-  border: 1px solid black;
-  width: 300px;
-  background-color: #DAFFEE;
-  border-radius: 1em;
-  padding: 0px 20px;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-.date {
+.kindness-form .date {
   height: 38px;
   padding: 6px 10px;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
   box-sizing: border-box;
-  margin: 0em 0em 1.5em 0em;
+  margin: 0em 0em 1.5em 1.5em;
   font: 11px BlinkMacSystemFont;
+}
+
+.kindness-story-container {
+  margin: 65px 0px 0px 0px;
+  height: 750px;
+  overflow: scroll;
+  width: 800px;
+  padding: 10px;
+}
+
+.kindness-content {
+  border: 1px solid black;
+  width: 200px;
+  height: auto;
+  background-color: #DAFFEE;
+  border-radius: 1em;
+  padding: 0px 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: inline-flex;
+}
+
+#kindness-list {
+  list-style-type: none;
+  margin: 0;
 }
 
 h3 {
   font-weight: bold;
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+.columns {
+  margin: 0;
 }
