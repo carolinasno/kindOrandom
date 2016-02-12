@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require directives/ng-map.min.js
 //= require_tree .
+
+function clearKindnessForm(){
+  var $kindnessForm = $('.kindness-form');
+  // var $submitKindness = $('.submit-kindness');
+  $kindnessForm.on('submit', function(){
+    $kindnessForm.val('');
+  })
+}
+
+
+$(function(){
+  clearKindnessForm();
+});

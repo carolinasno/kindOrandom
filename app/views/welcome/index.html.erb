@@ -2,12 +2,13 @@
   <div class="share-your-story five columns">
     <a class="kindness-story" href="#">SHARE YOUR RANDOM ACT OF KINDNESS</a>
     <ng-map zoom="12" center="New York, NY">
-      <marker id="kindness-marker" ng-repeat="kindness in kindness" position="{{kindness.location}}" on-click="map.showInfoWindow('kindness-info')"></marker>
-      <info-window id="kindness-info" visible-on-marker="kindness-marker">
-        <div ng-non-bindable>
-          <div id="siteNotice"></div>
+      <marker id="kindness-marker-{{k.id}}" ng-repeat="k in kindness" position="{{k.location}}" on-click="showKindnessInfo(k)"></marker>
+      <info-window id="kindness-window">
+        <div ng-non-bindable="">
           <div id="bodyContent">
-            <h4 id="firstHeading" class="firstHeading" ng-repeat="kindness in kindness track by kindness.id">{{kindness.name}}</h4>
+            <h4>{{currentKindness.name}}</h4>
+            <h5>{{currentKindness.kindness}}</h5>
+            <h5>{{currentKindness.location}}</h5>
           </div>
         </div>
       </info-window>
@@ -36,7 +37,7 @@
         </div>
         <div class="row">
           <div class="twelve columns">
-            <input class="u-full-width" type="submit">
+            <input class="u-full-width submit-kindness" type="submit">
           </div>
         </div>
         <!-- <input type="text" ng-model="newKindness.lat" placeholder="Latitude">
@@ -48,13 +49,13 @@
   <div class="seven columns">
     <section class="kindness-container">
       <div class="kindness-story-container">
-        <div class="kindness-content" ng-repeat="kindness in kindness">
+        <div class="kindness-content" ng-repeat="k in kindness | orderBy: 'created_at'">
           <ul id="kindness-list">
             <li>
-              <h3>{{kindness.name}}</h3>
-              <h4>{{kindness.kindness}}</h4>
-              <h5>on {{kindness.date | date: MM/dd/yyyy}}</h5>
-              <h5>at {{kindness.location}}</h5>
+              <h3>{{k.name}}</h3>
+              <h4>{{k.kindness}}</h4>
+              <h5>on {{k.date | date: MM/dd/yyyy}}</h5>
+              <h5>at {{k.location}}</h5>
             </li>
           </ul>
         </div>
