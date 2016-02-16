@@ -2,6 +2,7 @@ class Api::KindnessController < ApplicationController
 
   def index
     kindness = Kindness.all
+    
     render json: {kindness: kindness}
   end
 
