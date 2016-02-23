@@ -1,4 +1,4 @@
-![Alt text](/assets/images/kindOrandom-logo.png)
+![Alt text](/app/assets/images/kindOrandom-logo.png)
 
 ### kindOrandom
 
