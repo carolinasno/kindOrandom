@@ -1,4 +1,4 @@
-![Alt text](/assets/images/kindOrandom-logo.png)
+![Alt text](/app/assets/images/kindOrandom-logo.png)
 
 ### kindOrandom
 
@@ -14,15 +14,15 @@ The first step to developing kindOrandom was to build a form to enter in the ran
 
 ### User Stories
 
-![User stories](/assets/images/kindOrandom-form-display.png)
+![User stories](/app/assets/images/kindOrandom-form-display.png)
 
 * As a user, I want to be able to see the form where I enter in my random act of kindness, the map, and previous random acts of kindness.
 
-![User stories](/assets/images/kindOrandom-form.png)
+![User stories](/app/assets/images/kindOrandom-form.png)
 
 * As a user, I want to be able to enter in a random act of kindness in a form.
 
-![User stories](/assets/images/kindOrandom-display.png)
+![User stories](/app/assets/images/kindOrandom-display.png)
 
 * As a user, I want to be able to submit my random act of kindness, have it show on the map, and have it display with the other random acts of kindness.
 
