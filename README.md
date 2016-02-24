@@ -36,7 +36,6 @@ https://kindorandom.herokuapp.com/
 
 ### Technologies
 
-* Ruby
 * Rails
 * Angular
 * jQuery
